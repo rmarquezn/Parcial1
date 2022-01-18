@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
 
+    <script>
+      let nombres = [
+        "Jorge",
+        "Isabel",
+        "Juan",
+        "Pedro",
+        "Karina",
+        "Jose",
+        "Arturo",
+        "Rogelio",
+        "Bertha",
+      ];
 
-
-<script>
-
-let nombres  = ['Jorge','Isabel','Juan','Pedro','Karina','Jose','Arturo','Rogelio','Bertha'];
-
-
-/*
+      /*
 
 Funciones 1 -  Crea una funcion llamada "mayusculas" que:
 - reciba como argumento el arreglo "nombres" y convierta todos los nombres a mayusula.
@@ -19,12 +25,15 @@ Funciones 1 -  Crea una funcion llamada "mayusculas" que:
 
 */
 
-// CREA TU FUNCION MAYUSCULAS aqui:
+      // CREA TU FUNCION MAYUSCULAS aqui:
 
+      function mayusculas(names) {
+        names.forEach((name) => {
+          console.log(name.toUpperCase());
+        });
+      }
 
-
-
-/*
+      /*
 Funciones 2 -  Crea una funcion llamada "calculateDogAge" que: 
 
 - reciba como argumento un número representando la edad en años humanos.
@@ -34,18 +43,13 @@ Funciones 2 -  Crea una funcion llamada "calculateDogAge" que:
 
 */
 
-// CREA TU FUNCION calculateDogAge aqui:
+      // CREA TU FUNCION calculateDogAge aqui:
 
+      function calculateDogAge(year) {
+        console.log(`Tu perro tiene ${year * 7} años perro`);
+      }
 
-
-
-
-
-
-
-
-
-/*  OBJETOS 
+      /*  OBJETOS 
 
 A) Define un objeto tipo "Perro" que reciba 3 parametros
 
@@ -61,36 +65,34 @@ C) Con un console.log escribe el nombre del primer objeto, el color del segundo,
 
 */
 
+      function Perro(nombre, color, raza) {
+        this.nombre = nombre;
+        this.color = color;
+        this.raza = raza;
+      }
 
+      var perro1 = new Perro("Juan", "Rojo", "Westie");
+      var perro2 = new Perro("Firulais", "Verde", "Beagle");
+      var perro3 = new Perro("Snoop", "Azul", "Chihuahua");
 
-/***
- * 
- *        PRUEBA TUS FUNCIONES
- * 
- ***/
+      /***
+       *
+       *        PRUEBA TUS FUNCIONES
+       *
+       ***/
 
+      mayusculas(nombres);
+      calculateDogAge(4);
 
-mayusculas(nombres);
-calculateDogAge(4);
+      /***
+       *
+       *        PRUEBA TUS OBJETOS AQUI
+       *
+       ***/
 
+      console.log(`${perro1.nombre}, ${perro2.color}, ${perro3.raza}`);
+    </script>
+  </head>
 
-
-
-/***
- * 
- *        PRUEBA TUS OBJETOS AQUI
- * 
- ***/
-
-
-</script>
-
-</head>
-
-<body>
-
-
-
-</body>
-
+  <body></body>
 </html>
